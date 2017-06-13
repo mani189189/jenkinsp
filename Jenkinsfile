@@ -23,7 +23,8 @@ stage('Deploy') {
                 currentBuild.result == null || currentBuild.result == 'SUCCESS' 
               }
             }
-            steps {
+           
+steps {
                 sh 'make publish'
             }
         }                       
@@ -35,6 +36,6 @@ post {
           archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
         }
       }
-    }
+    
 
 
