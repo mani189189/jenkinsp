@@ -15,7 +15,19 @@ stages {
             sh 'ant -f test.xml -v'
             junit 'reports/result.xml'
                 }
-                        }
+} 
+
+stage('Deploy') {
+            when {
+              expression {
+                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+              }
+            }
+            steps {
+                sh 'make publish'
+            }
+        }                       
+}
 }
 post {
         always {
@@ -24,3 +36,5 @@ post {
         }
       }
     }
+
+
