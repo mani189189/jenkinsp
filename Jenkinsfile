@@ -18,7 +18,7 @@ stages {
 } 
 
 }
-}
+
 post {
         always {
 
@@ -26,5 +26,5 @@ post {
         }
       }
     
-
+}
 
