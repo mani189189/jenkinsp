@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="Addition-Build" default="main" basedir=".">
+<project name="Rectangle-Build" default="main" basedir=".">
   <property environment="env"/>
 
   <!-- Sets variables which can later be used. -->
@@ -9,7 +9,7 @@
   <property name="dist.dir" location="dist" />
 
   <path id="class.path">
-<pathelement location="./lib/junit-4.12.jar" /> 
+<pathelement location="./lib/junit-4.10.jar" /> 
     <pathelement location="${build.dir}" />
   </path>
 
@@ -34,9 +34,9 @@
 
   <!--Creates the deployable jar file  -->
   <target name="jar" depends="compile">
-    <jar destfile="${dist.dir}\Addition.jar" basedir="${build.dir}">
+    <jar destfile="${dist.dir}\rectangle.jar" basedir="${build.dir}">
       <manifest>
-        <attribute name="Main-Class" value="Addition" />
+        <attribute name="Main-Class" value="Rectangulator" />
       </manifest>
     </jar>
   </target>
@@ -46,4 +46,3 @@
   </target>
 
 </project>
-

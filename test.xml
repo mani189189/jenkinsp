@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="Addition-Test" default="main" basedir=".">
+<project name="Rectangle-Test" default="main" basedir=".">
   <property environment="env"/>
 
   <property name="src.dir" location="src" />
@@ -7,7 +7,7 @@
   <property name="report.dir" location="reports" />
 
   <path id="class.path">
-    <pathelement location="./lib/junit-4.12.jar" />
+    <pathelement location="./lib/junit-4.10.jar" />
     <pathelement location="${build.dir}" />
   </path>
 
@@ -30,7 +30,7 @@
   <target name="test" depends="clean, makedir, compile">
     <junit printsummary="yes" fork="true">
       <classpath refid="class.path" />
-      <test name="Addition" todir="${report.dir}" outfile="result">
+      <test name="RectangleTest" todir="${report.dir}" outfile="result">
         <formatter type="xml" />
       </test>
     </junit>
